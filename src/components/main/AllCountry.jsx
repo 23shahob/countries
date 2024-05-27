@@ -20,7 +20,7 @@ const AllCountry = ({ search, region, handleCountryClick }) => {
 
     fetchData();
   }, []);
-
+  console.table(data)
   const filteredCountries = region
     ? data.filter((country) => country.region === region)
     : data;
