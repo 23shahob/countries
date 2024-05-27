@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div>
+      <div className="shadowing">
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <MainSection />
       </div>

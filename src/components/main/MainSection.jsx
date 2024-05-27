@@ -30,14 +30,14 @@ const MainSection = () => {
   };
 
   return (
-    <div className="dark:bg-[#202D36]">
+    <div className="dark:bg-[#202D36] z-0">
       {selectedCountry ? (
-        <div className="min-h-screen px-12 pt-14 md:px-8">
+        <div className="min-h-screen px-12 pt-28 md:px-8">
           <button
             onClick={handleBackClick}
-            className="mb-16 flex h-10 items-center gap-2 rounded-md px-5 shadow-md dark:bg-[#2B3743] dark:text-white"
+            className="hover:scale-[101%] hover:shadow-yellow-500 mb-16 flex h-10 items-center gap-2 rounded-md px-5 shadow-md dark:bg-[#2B3743] dark:text-white"
           >
-            <WestIcon />
+            <WestIcon className="rotating"/>
             <p> Back</p>
           </button>
           <div className="block items-center gap-10 dark:border-none md:flex lg:gap-20 xl:gap-40">
