@@ -11,7 +11,7 @@ const TopSection = ({ setSearch, setRegion, region }) => {
   return (
     <div className="mx-12 flex items-center justify-between pt-12">
       <div>
-        <form className="flex h-14 w-[450px] items-center gap-2 rounded border border-gray-100 px-3 shadow-md dark:border-none dark:bg-[#2B3743]">
+        <form className="flex h-14 w-[200px] md:w-[450px] sm:w-[300px] items-center gap-2 rounded border border-gray-100 px-3 shadow-md dark:border-none dark:bg-[#2B3743]">
           <SearchOutlined className="h-7 w-7 text-neutral-600 dark:text-white" />
           <input
             type="search"
