@@ -20,12 +20,9 @@ const AllCountry = ({ search, region, handleCountryClick }) => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
-
-  useEffect(() => {
+    fetchData()
     console.table(data);
-  }, [data]);
+  }, []);
 
   const filteredCountries = region
     ? data.filter((country) => country.region === region)
