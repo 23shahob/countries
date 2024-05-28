@@ -7,7 +7,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     setDarkMode(!darkMode);
   };
   return (
-    <div className="flex h-16 items-center fixed top-0 w-full z-10 justify-between px-12 shadow-md dark:bg-[#2B3743]">
+    <div className="flex h-16 items-center bg-white fixed top-0 w-full z-10 justify-between px-12 shadow-md dark:bg-[#2B3743]">
       <div>
         <p className="text text-xl font-semibold dark:text-white">
           Where in the world?

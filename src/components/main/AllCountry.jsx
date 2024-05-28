@@ -6,21 +6,27 @@ const AllCountry = ({ search, region, handleCountryClick }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(COUNTRY);
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      console.log("Fetching data from API...");
+      const response = await axios.get(COUNTRY);
+      console.log("Data fetched successfully:", response.data);
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, []);
-  console.table(data)
+
+  useEffect(() => {
+    console.table(data);
+  }, [data]);
+
   const filteredCountries = region
     ? data.filter((country) => country.region === region)
     : data;
